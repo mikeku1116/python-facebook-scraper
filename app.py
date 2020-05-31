@@ -1,5 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+import webdriver_manager
+from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
 import time
 import config
@@ -8,7 +10,7 @@ import config
 options = Options()
 options.add_argument("--disable-notifications")
 
-chrome = webdriver.Chrome('./chromedriver', chrome_options=options)
+chrome = webdriver.Chrome(ChromeDriverManager().install(), chrome_options=options)
 chrome.get("https://www.facebook.com/")
 
 email = chrome.find_element_by_id("email")
