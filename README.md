@@ -2,7 +2,7 @@
 
 ## 專案介紹 ##
 
-本專案結合Python的Selenium及BeautifulSoup套件，開發爬取Facebook粉絲專頁文章標題的動態網頁爬蟲，其中使用的Selenium Webdriver為ChromeDriver 83.0.4103.39，可以搭配[[Python爬蟲教學]整合Python Selenium及BeautifulSoup實現動態網頁爬蟲(https://www.learncodewithmike.com/2020/05/python-selenium-scraper.html)部落格文章來進行學習。
+本專案結合Python的Selenium及BeautifulSoup套件，開發爬取Learn Code With Mike粉絲專頁文章標題的動態網頁爬蟲，其中使用的Selenium Webdriver為ChromeDriver 83.0.4103.39，可以搭配[[Python爬蟲教學]整合Python Selenium及BeautifulSoup實現動態網頁爬蟲](https://www.learncodewithmike.com/2020/05/python-selenium-scraper.html)部落格文章來進行學習。
 
 ## 前置作業 ##
 
