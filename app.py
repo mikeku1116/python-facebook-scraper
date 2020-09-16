@@ -10,7 +10,8 @@ import config
 options = Options()
 options.add_argument("--disable-notifications")
 
-chrome = webdriver.Chrome(ChromeDriverManager().install(), chrome_options=options)
+chrome = webdriver.Chrome(
+    ChromeDriverManager().install(), chrome_options=options)
 chrome.get("https://www.facebook.com/")
 
 email = chrome.find_element_by_id("email")
@@ -30,7 +31,7 @@ for x in range(1, 4):
 soup = BeautifulSoup(chrome.page_source, 'html.parser')
 
 titles = soup.find_all('span', {
-    'class': 'oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j s89635nw ew0dbk1b a5q79mjw g1cxx5fr lrazzd5p oo9gr5id hzawbc8m'})
+    'class': 'a8c37x1j ni8dbmo4 stjgntxs l9j0dhe7'})
 
 for title in titles:
     print(title.getText())
