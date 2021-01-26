@@ -20,7 +20,6 @@ password = chrome.find_element_by_id("pass")
 email.send_keys(config.email)
 password.send_keys(config.password)
 password.submit()
-
 time.sleep(3)
 chrome.get('https://www.facebook.com/learncodewithmike')
 
@@ -30,10 +29,14 @@ for x in range(1, 4):
 
 soup = BeautifulSoup(chrome.page_source, 'html.parser')
 
-titles = soup.find_all('span', {
-    'class': 'a8c37x1j ni8dbmo4 stjgntxs l9j0dhe7'})
+titles = soup.find_all(
+    'span', {'class': 'a8c37x1j ni8dbmo4 stjgntxs l9j0dhe7 ojkyduve'})
 
 for title in titles:
-    print(title.getText())
+
+    post = title.find('span', {'dir': 'auto'})
+
+    if post:
+        print(post.getText())
 
 chrome.quit()
